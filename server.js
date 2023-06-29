@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('./routes');
+const routes = require('./routes/routes');
 
 const sequelize = require('./config/connection');
 
@@ -15,4 +15,4 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
 })
 
-console.log ("hello world")
+console.log ("hello world");
