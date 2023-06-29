@@ -1,7 +1,7 @@
 insert into clothes (clothes_name, clothes_price)
 values ("black shirt", 20),
 ("pants", 40),
-("hat", 30),s
+("hat", 30),
 ("red shirt", 20);
 
 insert into furniture (furniture_name, furniture_price)
