@@ -1,3 +1,12 @@
+
+
+<h1>Home Page!</h1>
+
 {{#each galleries as |gallery|}}
-{{> gallery-details}}
+<section class="card">
+  <a href="/gallery/{{id}}">
+    <header>{{name}}</header>
+    <img src="/images/{{paintings.[0].filename}}" alt="{{paintings.[0].description}}">
+  </a>
+</section>
 {{/each}}
