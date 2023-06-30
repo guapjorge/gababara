@@ -21,6 +21,9 @@ Clothes.init(
         type: DataTypes.DECIMAL,
         allowNull: false,
 
+    },
+    image: {
+      type: DataTypes.STRING
     }
   },
   {
@@ -28,7 +31,7 @@ Clothes.init(
     timestamps: false,
     freezeTableName: true,
     underscored: false,
-    modelName: "Clothes"
+    modelName: "Clothes" 
   }
 );
 
