@@ -21,6 +21,9 @@ Jewelry.init(
         type: DataTypes.DECIMAL,
         allowNull: false,
 
+    },
+    image: {
+      type: DataTypes.STRING
     }
   },
   {
