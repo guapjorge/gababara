@@ -14,7 +14,7 @@ router.get("/gallery", (req,res)=> {
 
 
 router.get("/painting", (req,res)=> {
-    res.render("orderpage")
+    res.render("painting")
 })
 
 module.exports = router
