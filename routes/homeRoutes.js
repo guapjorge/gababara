@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const { Clothes, Furniture, Tech } = require("../models")
+const { Clothes, Furniture, Tech, Jewelry } = require("../models")
 
 router.get("/", (req, res) => {
     res.render("homepage")
