@@ -33,4 +33,8 @@ router.get("/painting", (req, res) => {
     res.render("painting")
 })
 
+router.get("/checkout", (req, res) => {
+    res.render("checkout")
+})
+
 module.exports = router
