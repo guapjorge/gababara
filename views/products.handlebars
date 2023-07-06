@@ -1,18 +1,28 @@
 <section class="container">
-
-
-  {{#each clothes as |item|}}
-  <h3 class="gallery-name">{{item.clothesName}}</h3>
-  <h4>Price: ${{item.clothesPrice}}</h4>
-
-  <section class="flex-row justify-center">
-    {{!-- {{#each product.paintings as |painting|}}
-    {{> painting-details}}
-    {{/each}} --}}
+<div class="row">
+    {{#each clothes as |item|}}
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{item.image}}">
+          <span class="card-title">{{item.clothesName}}</span>
+        </div>
+        <div class="card-content">
+          <p>${{item.clothesPrice}}</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
     {{/each}}
+  </div>
+
+
   </section>
 
   <!--products/gallary and add script.js at the bottom-->
 
   <!--    in theroy this will have index and script -->
 </section>
+
