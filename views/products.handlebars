@@ -1,9 +1,3 @@
-{{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css%22%3E
-<head>
-  <title>Shopping Cart</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css%22%3E
-</head> --}}
-
 <section class="container">
 <div class="row">
     {{#each clothes as |item|}}
@@ -20,19 +14,26 @@
           <a href="#">This is a link</a>
         </div>
       </div>
+      {{/each}}
+
+      <div class="col s12">
+        <h2>Cart</h2>
+        <div id="cart-container"></div>
+      </div>
+
+      <div class="col s12">
+        <button id="checkout-btn" class="btn">Checkout</button>
+      </div>
     </div>
-    {{/each}}
-  </div>
-
-
   </section>
 
-  <!--products/gallary and add script.js at the bottom-->
+  <script src="script.js"></script>
+</body>
 
   <!--    in theroy this will have index and script -->
 </section>
 
-<section class="container">
+<section class="container2">
 <div class="row">
     {{#each tech as |item|}}
     <div class="col s12 m7">
@@ -56,3 +57,4 @@
   </section>
 
   </section>
+>>>>>>> c76bb17b546ed8585225c723d22f3c8fac8a5d4a
