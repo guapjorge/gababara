@@ -1,4 +1,6 @@
-insert into clothes (clothes_name, clothes_price)
+use store;
+
+insert into clothes (clothesName, clothesPrice)
 values ("black shirt", 20),
 ("pants", 40),
 ("hat", 30),
