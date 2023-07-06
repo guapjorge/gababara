@@ -5,6 +5,16 @@
   <h3 class="gallery-name">{{item.clothesName}}</h3>
   <h4>Price: ${{item.clothesPrice}}</h4>
 
+  {{#each furniture as |item| }}
+  <h3 class="gallery-name"> {{item.furitureName}}</h3>
+  <h4> Price: ${{ item.furniturePrice}}</h4>
+
+  {{#each furniture as |item| }}
+  <h3 class="gallery-name"> {{item.furitureName}}</h3>
+  <h4> Price: ${{ item.furniturePrice}}</h4>
+
+
+
   <section class="flex-row justify-center">
     {{!-- {{#each product.paintings as |painting|}}
     {{> painting-details}}
