@@ -1,27 +1,43 @@
-<section class="container">
-  <div class="row">
-    {{#each clothes as |item|}}
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{item.image}}">
-          <span class="card-title">{{item.clothesName}}</span>
-        </div>
-        <div class="card-content">
-          <p>${{item.clothesPrice}}</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+  <section class="container">
+    <div class="row">
+      {{#each clothes as |item|}}
+      <div class="col s12 m7">
+        <div class="card">
+          <div class="card-image">
+            <img src="{{item.image}}">
+            <span class="card-title">{{item.clothesName}}</span>
+          </div>
+          <div class="card-content">
+            <p>${{item.clothesPrice}}</p>
+          </div>
+          <div class="card-action">
+            <a href="#" class="add-to-cart" data-id="{{item.id}}" onclick="addToCart('{{item.id}}')">Add to Cart</a>
+          </div>
         </div>
       </div>
+      {{/each}}
+
+      <div class="col s12">
+        <h2>Cart</h2>
+        <div id="cart-container"></div>
+      </div>
+
+      <div class="col s12">
+        <button id="checkout-btn" class="btn">Checkout</button>
+      </div>
     </div>
-    {{/each}}
-  </div>
+  </section>
 
+  <script src="script.js"></script>
+</body>
 
-</section>
-
-<!--products/gallary and add script.js at the bottom-->
-
-<!--    in theroy this will have index and script -->
-</section>
+</html>

@@ -6,7 +6,7 @@ values ("black shirt", 20, "images/clothes/b_shirt.jpg"),
 ("hat", 30, "images/clothes/dmg_hat.jpg"),
 ("red shirt", 20, "images/clothes/yugi_shirt.jpg");
 
-insert into furniture (furniture_name, furniture_price)
+insert into furniture (furnitureName, furniturePrice)
 values ("bed", 600),
 ("chair", 200),
 ("shelf", 200),
