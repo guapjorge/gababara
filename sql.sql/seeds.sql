@@ -1,10 +1,10 @@
 use store;
 
-insert into clothes (clothesName, clothesPrice)
-values ("black shirt", 20),
-("pants", 40),
-("hat", 30),
-("red shirt", 20);
+insert into clothes (clothesName, clothesPrice, image)
+values ("black shirt", 20, "images/clothes/b_shirt.jpg"),
+("pants", 40, "images/clothes/bewd-pants.jpg"),
+("hat", 30, "images/clothes/dmg_hat.jpg"),
+("red shirt", 20, "images/clothes/yugi_shirt.jpg");
 
 insert into furniture (furniture_name, furniture_price)
 values ("bed", 600),
