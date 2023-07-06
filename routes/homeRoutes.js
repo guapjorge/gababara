@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const { Clothes, Furniture, Tech, Jewelry } = require("../models")
+const { Clothes, Furniture , Tech} = require("../models")
 
 router.get("/", (req, res) => {
     res.render("homepage")
@@ -22,7 +22,6 @@ router.get("/products", async (req, res) => {
         clothes, tech
     })
 })
-
 
 
 //where all item is cart  should be sent so the will be in the cart  

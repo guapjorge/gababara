@@ -9,7 +9,7 @@ values ("black shirt", 20, "images/clothes/b_shirt.jpg"),
 insert into furniture (furnitureName, furniturePrice, image)
 values ("bed", 600, "images/furniture/bed.png"),
 ("chair", 200, "images/furniture/chair.png"),
-("shelf", 200, "images/furniture/shelf.png"),
+("shelf", 200 , "images/furniture/shelf.png"),
 ("tv stand", 200, "images/furniture/tvstand.png");
 
 insert into jewelry (jewelryName, jewelryPrice, image)
@@ -19,7 +19,7 @@ values ("skull ring", 40, "images/jewelry/3_skulls_ring.png"),
 ("skull earrings", 50, "images/jewelry/cross_skull_earring.png");
 
 insert into tech (techName, techPrice, image)
-values ("airpods", 200, "images/technology/airpods.png"),
-("apple watch", 500, "images/technology/apple_watch.png"),
+values ("airpods", 200, "images/technology/airpods/png"),
+("apple watch", 500 "images/technology/apple_watch.png"),
 ("iphone ", 1000, "images/technology/iphone.png"),
 ("macbook", 3000, "images/technology/macbook.png");

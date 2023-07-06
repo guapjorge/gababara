@@ -1,6 +1,7 @@
 const Clothes = require("./Clothes")
 const Furniture = require("./Furniture")
-const Tech = require = require("./Tech")
+const Tech = require("./Tech")
+
 
 
 
