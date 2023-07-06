@@ -40,4 +40,29 @@
   <script src="script.js"></script>
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+<section class="container2">
+<div class="row">
+    {{#each tech as |item|}}
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{item.image}}">
+          <span class="card-title">{{item.techName}}</span>
+        </div>
+        <div class="card-content">
+          <p>${{item.techPrice}}</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+
+  </section>
+>>>>>>> c76bb17b546ed8585225c723d22f3c8fac8a5d4a

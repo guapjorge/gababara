@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const { Clothes, Furniture, Jewelry, Tech } = require("../models")
+const { Clothes, Furniture, Tech } = require("../models")
 
 router.get("/", (req, res) => {
     res.render("homepage")
@@ -32,6 +32,17 @@ router.get("/products", async (req, res) => {
     })
 });
 
+router.get("/tech", async (req, res) => {
+
+    const techData = await Tech.findAll()
+    const tech = techData.map(item => item.get({ plain: true }))
+
+
+
+    res.render("tech", {
+        tech,
+    })
+})
 
 router.get("/furniture", async (req, res) => {
     const furnitureData = await Furniture.findAll()
