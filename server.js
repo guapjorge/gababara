@@ -9,11 +9,7 @@ const exphbs = require('express-handlebars');
 
 
 const app = express();
-<<<<<<< HEAD
-const PORT = process.env.PORT || 3033;
-=======
 const PORT = process.env.PORT || 3002;
->>>>>>> c76bb17b546ed8585225c723d22f3c8fac8a5d4a
 
 const hbs = exphbs.create()
 app.engine('handlebars', hbs.engine);
