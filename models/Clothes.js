@@ -12,17 +12,17 @@ Clothes.init(
       autoIncrement: true,
       primaryKey: true
     },
-    clothesName: {
+    clothes_name: {
         type: DataTypes.STRING,
         allowNull: false,
         length: 30
     },
-    clothesPrice: {
+    clothes_price: {
         type: DataTypes.DECIMAL,
         allowNull: false,
 
     },
-    image: {
+    image_url: {
       type: DataTypes.STRING
     }
   },

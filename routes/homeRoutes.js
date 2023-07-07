@@ -33,11 +33,11 @@ router.get("/products", async (req, res) => {
 });
 
 router.get("/tech", async (req, res) => {
-
+console.log("tech route")
     const techData = await Tech.findAll()
     const tech = techData.map(item => item.get({ plain: true }))
 
-
+console.log(tech)
 
     res.render("tech", {
         tech,

@@ -1,14 +1,14 @@
-<section class="container2">
+<section class="container">
 <div class="row">
     {{#each tech as |item|}}
     <div class="col s12 m7">
       <div class="card">
         <div class="card-image">
-          <img src="{{item.image}}">
-          <span class="card-title">{{item.techName}}</span>
+          <img src="{{item.image_url}}">
+          <span class="card-title">{{item.tech_name}}</span>
         </div>
         <div class="card-content">
-          <p>${{item.techPrice}}</p>
+          <p>${{item.tech_price}}</p>
         </div>
         <div class="card-action">
           <a href="#">This is a link</a>
@@ -20,3 +20,5 @@
 
 
   </section>
+  
+  <p>hello</p>
