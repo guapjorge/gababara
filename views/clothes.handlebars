@@ -1,17 +1,18 @@
 <section class="container">
   <div class="row">
-    {{#each furniture as |item|}}
+    {{#each clothes as |item|}}
     <div class="col s12 m7">
       <div class="card">
         <div class="card-image">
           <img src="{{item.image_url}}">
         </div>
         <div class="card-content">
-          <span class="card-title purple-text text-lighten-2">{{item.furniture_name}}</span>
-          <p>${{item.furniture_price}}</p>
+        <span class="card-title purple-text text-lighten-2">{{item.clothes_name}}</span>
+          <p>${{item.clothes_price}}
+          </p>
         </div>
         <div class="card-action">
-         <button>
+            <button>
             <a href="#">Add to cart</a>
           </button>
         </div>
