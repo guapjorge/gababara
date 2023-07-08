@@ -13,13 +13,10 @@ router.get("/clothes", async (req, res) => {
 
     const clothingData = await Clothes.findAll()
     const clothes = clothingData.map(item => item.get({ plain: true }))
- 
-    res.render("clothes", {
-        clothes,
-    })
-});
-
-router.get("/tech", async (req, res) => {
+    const furnitureData = await Furniture.findAll()
+    const furniture = furnitureData.map(item => item.get({ plain: true }))
+    const jewelryData = await Jewelry.findAll()
+    const jewelry = jewelryData.map(item => item.get({ plain: true }))
     const techData = await Tech.findAll()
     const tech = techData.map(item => item.get({ plain: true }))
 
