@@ -19,7 +19,7 @@ values ("skull ring", 40, "images/jewelry/3_skulls_ring.png"),
 ("skull earrings", 50, "images/jewelry/cross_skull_earring.png");
 
 insert into tech (tech_name, tech_price, image_url)
-values ("airpods", 200, "images/technology/airpods/png"),
+values 
 ("apple watch", 500, "images/technology/apple_watch.png"),
 ("iphone ", 1000, "images/technology/iphone.png"),
 ("macbook", 3000, "images/technology/macbook.png");

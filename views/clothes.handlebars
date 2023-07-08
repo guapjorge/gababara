@@ -1,0 +1,36 @@
+<section class="container">
+  <div class="row">
+    {{#each clothes as |item|}}
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{item.image_url}}">
+        </div>
+        <div class="card-content">
+        <span class="card-title purple-text text-lighten-2">{{item.clothes_name}}</span>
+          <p>${{item.clothes_price}}
+          </p>
+        </div>
+        <div class="card-action">
+            <button>
+            <a href="#">Add to cart</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+
+    <div class="col s12">
+      <h2>Cart</h2>
+      <div id="cart-container"></div>
+    </div>
+
+    <div class="col s12">
+      <button id="checkout-btn" class="btn">Checkout</button>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+<!--    in theroy this will have index and script -->
