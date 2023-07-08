@@ -2,7 +2,7 @@ const { Sequelize, Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class Clothes extends Model {}
+class Clothes extends Model { }
 
 Clothes.init(
   {
@@ -12,17 +12,17 @@ Clothes.init(
       autoIncrement: true,
       primaryKey: true
     },
-    clothesName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        length: 30
+    clothes_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      length: 30
     },
-    clothesPrice: {
-        type: DataTypes.DECIMAL,
-        allowNull: false,
+    clothes_price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
 
     },
-    image: {
+    image_url: {
       type: DataTypes.STRING
     }
   },
@@ -31,7 +31,7 @@ Clothes.init(
     timestamps: false,
     freezeTableName: true,
     underscored: false,
-    modelName: "Clothes" 
+    modelName: "Clothes"
   }
 );
 
