@@ -12,12 +12,12 @@ Tech.init(
       autoIncrement: true,
       primaryKey: true
     },
-    techName: {
+    tech_name: {
         type: DataTypes.STRING,
         allowNull: false,
         length: 30
     },
-    techPrice: {
+    tech_price: {
         type: DataTypes.DECIMAL,
         allowNull: false,
 
