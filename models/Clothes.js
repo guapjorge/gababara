@@ -22,7 +22,7 @@ Clothes.init(
         allowNull: false,
 
     },
-    image: {
+    image_url: {
       type: DataTypes.STRING
     }
   },
