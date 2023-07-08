@@ -51,8 +51,3 @@ sequelize.sync({ force: false }).then(() => {
 console.log("hello world");
 
 // set up handlebars in this file and set up express sessions (for log in and log out)
-<<<<<<< HEAD
-
-// set up handlebars in this file and set up express sessions (for log in and log out)
-=======
->>>>>>> 2dad7761e7fc0deffad87db28a4ff2eff3d2b850
