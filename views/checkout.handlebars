@@ -1,1 +1,67 @@
-<script src="js/"></script>
+<h1>I am a checkout page!</h1>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Checkout</h1>
+    <div id="cart-items-section">
+        <button id="order">place order</button>
+        <p></p>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const getParameterByName = (name) => {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        };
+
+        const cartData = getParameterByName('items');
+
+        if (cartData) {
+
+            const cartItems = JSON.parse(decodeURIComponent(cartData));
+
+            const totalPrice = cartItems.reduce((total, item) => total + item.price, 0).toFixed(2);
+
+
+            const cartItemsSection = document.getElementById('cart-items-section');
+
+            if (cartItemsSection) {
+                const cartItemsList = document.createElement('ul');
+
+                cartItems.forEach((item) => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                    cartItemsList.appendChild(listItem);
+                });
+
+                cartItemsSection.appendChild(cartItemsList);
+
+
+                const totalDiv = document.createElement('div');
+                totalDiv.textContent = `Total: $${totalPrice}`;
+                cartItemsSection.appendChild(totalDiv);
+            }
+        } else {
+
+            const cartItemsSection = document.getElementById('cart-items-section');
+            if (cartItemsSection) {
+                cartItemsSection.textContent = 'Your cart is empty.';
+            }
+        }
+    });
+</script>

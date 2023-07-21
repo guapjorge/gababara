@@ -12,17 +12,17 @@ Furniture.init(
       autoIncrement: true,
       primaryKey: true
     },
-    furnitureName: {
+    furniture_name: {
         type: DataTypes.STRING,
         allowNull: false,
         length: 30
     },
-    furniturePrice: {
+    furniture_price: {
         type: DataTypes.DECIMAL,
         allowNull: false,
 
     },
-    image: {
+    image_url: {
       type: DataTypes.STRING
     }
   },

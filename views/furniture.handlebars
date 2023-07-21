@@ -1,22 +1,71 @@
-<section class="container2">
-    <div class="row">
-        {{#each furniture as |item|}}
-        <div class="col s12 m7">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{item.image}}">
-                    <span class="card-title">{{item.furnitureName}}</span>
-                </div>
-                <div class="card-content">
-                    <p>${{item.furniturePrice}}</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
-        </div>
-        {{/each}}
-    </div>
-    adfasdafa
+<!DOCTYPE html>
+<html>
 
-</section>
+<head>
+
+</head>
+
+<body>
+  <section class="container">
+    <div class="row">
+      {{#each furniture as |item|}}
+      <div class="col s12 m7">
+        <div class="card">
+          <div class="card-image">
+            <img src="{{item.image_url}}">
+          </div>
+          <div class="card-content">
+            <span class="card-title purple-text text-lighten-2">{{item.furniture_name}}</span>
+            <p>${{item.furniture_price}}</p>
+          </div>
+          <div class="card-action">
+            <button class="add-to-cart-btn" data-product="{{item.furniture_name}}"
+              data-price="{{item.furniture_price}}">
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <div class="col s12">
+    <h2>Cart</h2>
+    <div id="cart-container"></div>
+  </div>
+
+  <div class="col s12">
+    <button id="checkout-btn" class="btn">Checkout</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+      const checkoutButton = document.getElementById('checkout-btn');
+      const cartItems = [];
+
+      addToCartButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const productName = button.getAttribute('data-product');
+          const productPrice = parseFloat(button.getAttribute('data-price'));
+
+          cartItems.push({ name: productName, price: productPrice });
+          alert(`${productName} added to cart!`);
+        });
+      });
+
+      checkoutButton.addEventListener('click', () => {
+        if (cartItems.length === 0) {
+          alert('Your cart is empty.');
+        } else {
+          const cartData = encodeURIComponent(JSON.stringify(cartItems));
+          window.location.href = `/checkout?items=${cartData}`;
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

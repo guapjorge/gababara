@@ -12,17 +12,17 @@ Jewelry.init(
       autoIncrement: true,
       primaryKey: true
     },
-    jewelryName: {
+    jewelry_name: {
         type: DataTypes.STRING,
         allowNull: false,
         length: 30
     },
-    jewelryPrice: {
+    jewelry_price: {
         type: DataTypes.DECIMAL,
         allowNull: false,
 
     },
-    image: {
+    image_url: {
       type: DataTypes.STRING
     }
   },
