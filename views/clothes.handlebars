@@ -12,28 +12,53 @@
           </p>
         </div>
         <div class="card-action">
-          <button>
-            <a href="#">Add to cart</a>
-          </button>
+          <div class="card-action">
+            <button class="add-to-cart-btn" data-product="{{item.clothes_name}}" data-price="{{item.clothes_price}}">
+              Add to cart
+            </button>
+          </div>
         </div>
       </div>
     </div>
     {{/each}}
-
-    <div class="col s12">
-      <h2>Cart</h2>
-      <div id="cart-container"></div>
-    </div>
-
-    <div class="col s12">
-      <button id="checkout-btn" class="btn">Checkout</button>
-    </div>
-  </div>
 </section>
 
-<script src="script.js"></script>
+<div class="col s12">
+  <h2>Cart</h2>
+  <div id="cart-container"></div>
+</div>
 
-<<<<<<< HEAD <!-- in theroy this will have index and script -->
-  =======
-  <!--    in theory this will have index and script -->
-  >>>>>>> 2dad7761e7fc0deffad87db28a4ff2eff3d2b850
+<div class="col s12">
+  <button id="checkout-btn" class="btn">Checkout</button>
+</div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    const checkoutButton = document.getElementById('checkout-btn');
+    const cartItems = [];
+
+    addToCartButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const productName = button.getAttribute('data-product');
+        const productPrice = parseFloat(button.getAttribute('data-price'));
+
+        cartItems.push({ name: productName, price: productPrice });
+        alert(`${productName} added to cart!`);
+      });
+    });
+
+    checkoutButton.addEventListener('click', () => {
+      if (cartItems.length === 0) {
+        alert('Your cart is empty.');
+      } else {
+        const cartData = encodeURIComponent(JSON.stringify(cartItems));
+        window.location.href = `/checkout?items=${cartData}`;
+      }
+    });
+  });
+</script>
+
+
+<script src="script.js"></script

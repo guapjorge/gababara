@@ -13,7 +13,6 @@ Clothes.init(
       primaryKey: true
     },
     clothes_name: {
-<<<<<<< HEAD
       type: DataTypes.STRING,
       allowNull: false,
       length: 30
@@ -21,15 +20,6 @@ Clothes.init(
     clothes_price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
-=======
-        type: DataTypes.STRING,
-        allowNull: false,
-        length: 30
-    },
-    clothes_price: {
-        type: DataTypes.DECIMAL,
-        allowNull: false,
->>>>>>> 2dad7761e7fc0deffad87db28a4ff2eff3d2b850
 
     },
     image_url: {

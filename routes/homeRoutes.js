@@ -20,8 +20,8 @@ router.get("/clothes", async (req, res) => {
     const techData = await Tech.findAll()
     const tech = techData.map(item => item.get({ plain: true }))
 
-    res.render("tech", {
-        tech,
+    res.render("clothes", {
+        clothes,
     })
 })
 
@@ -41,6 +41,16 @@ router.get("/jewelry", async (req, res) => {
 
     res.render("jewelry", {
         jewelry
+    })
+});
+
+
+router.get("/tech", async (req, res) => {
+    const techData = await Tech.findAll()
+    const tech = techData.map(item => item.get({ plain: true }))
+
+    res.render("tech", {
+        tech
     })
 });
 
