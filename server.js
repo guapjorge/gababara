@@ -9,7 +9,7 @@ const exphbs = require('express-handlebars');
 
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT ||  3306;
 
 const hbs = exphbs.create()
 app.engine('handlebars', hbs.engine);
@@ -20,28 +20,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"))
 
 app.use(routes);
-
-// const connection = mysql.createConnection({
-//   host : 'localhost',
-//   database: 'testing',
-//   user: 'roots',
-//   password: '',
-
-// });
-
-// connection.connect((error) => {
-//   console.log("you have succesfully did the job.")
-// });
-
-// app.use(Session({
-//   secret : '',
-//   resave : false,
-
-
-// }));
-
-
-
 
 
 sequelize.sync({ force: false }).then(() => {
